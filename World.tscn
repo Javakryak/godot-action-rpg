@@ -491,9 +491,8 @@ __meta__ = {
 
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 3 )
-centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 320, 180 )
+region_rect = Rect2( -208, -144, 1184, 848 )
 
 [node name="DirtPathTilemap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -511,10 +510,19 @@ tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -6
 [node name="GrassCliffTilemap" type="TileMap" parent="."]
 format = 1
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 117, 96 )
+current = true
+zoom = Vector2( 1.5, 1.5 )
+smoothing_enabled = true
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 117, 96 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+remote_path = NodePath("../../../Camera2D")
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
@@ -573,7 +581,9 @@ position = Vector2( 256, 72 )
 [node name="Bat5" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 302, 47 )
 
-[node name="HealthUI" parent="." instance=ExtResource( 8 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 8 )]
 margin_left = 3.0
 margin_top = 3.0
 margin_right = 61.0

@@ -37,5 +37,3 @@ animation = "Animate"
 centered = false
 offset = Vector2( -8, -8 )
 script = ExtResource( 2 )
-
-[connection signal="animation_finished" from="." to="." method="_on_GrassEffect_animation_finished"]
