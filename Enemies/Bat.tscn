@@ -51,11 +51,13 @@ radius = 4.0
 
 [node name="Bat" type="KinematicBody2D"]
 collision_layer = 16
+collision_mask = 17
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
 animation = "Fly"
+frame = 2
 playing = true
 offset = Vector2( 0, -12 )
 
