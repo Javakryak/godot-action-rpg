@@ -528,7 +528,7 @@ position = Vector2( 191, 89 )
 [node name="Grass" type="YSort" parent="YSort"]
 
 [node name="Grass" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 0, 64 )
+position = Vector2( 208, 112 )
 
 [node name="Grass5" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 16, 136 )
@@ -546,10 +546,10 @@ position = Vector2( 112, 112 )
 position = Vector2( 96, 32 )
 
 [node name="Grass3" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 16, 64 )
+position = Vector2( 64, 64 )
 
 [node name="Grass4" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 32, 64 )
+position = Vector2( 80, 64 )
 
 [node name="Bat" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 48, 168 )
